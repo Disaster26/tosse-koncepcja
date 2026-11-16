@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TOSSE - artykuły przemysłowe i BHP, sklep dla firm (podgląd)</title>
+<meta name="description" content="TOSSE - artykuły przemysłowe i BHP. Sklep z ochroną oczu, słuchu, dłoni i głowy, doradztwo w doborze środków ochrony. Podgląd nowej strony.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#EE6029">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-800.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-800.webp 800w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1512.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1512.webp 1512w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/sg-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/sg-pl.woff2" crossorigin>
+<style>
+@font-face{font-family:SG;font-weight:400 800;font-display:swap;src:url(fonts/sg-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00B7,U+00D3,U+00D7,U+00F3,U+2013,U+2019,U+201D,U+201E,U+2026,U+2192}
+@font-face{font-family:SG;font-weight:400 800;font-display:swap;src:url(fonts/sg-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:SGfb;src:local("Arial");size-adjust:101%;ascent-override:94%;descent-override:26%}
+:root{--o:#EE6029;--o2:#D74000;--ot:#B83A06;--g:#1A1613;--g2:#2A2420;--s:#F1F3F5;--t:#16130F;--m:#5B5F66;--l:#DDE1E6;--w:min(1240px,calc(100% - 40px))}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--t);font:400 17px/1.55 SG,SGfb,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.08;margin:0}
+.wrap{width:var(--w);margin:0 auto}
+.btn{--c:10px;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 26px;border:0;background:var(--o);color:#fff;font:600 17px/1 SG,SGfb,sans-serif;text-decoration:none;cursor:pointer;clip-path:polygon(var(--c) 0,100% 0,100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,0 100%,0 var(--c));transition:background .15s}
+.btn:hover{background:var(--o2)}
+.btn.bia{background:#fff;color:var(--t)}
+.btn.bia:hover{background:#FFE7DC}
+.btn.ciem{background:var(--g)}
+.btn.ciem:hover{background:#000}
+.tarcza{display:inline-block;width:1em;height:.74em;background:currentColor;clip-path:polygon(0 24%,9% 15%,9% 0,91% 0,91% 15%,100% 24%,61% 100%,50% 93%,39% 100%)}
+/* naglowek */
+.nag{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff}
+.nag .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.nag .logo{width:128px;height:auto;display:block}
+.nag nav{display:flex;gap:26px;margin-left:auto;font-weight:500}
+.nag nav a{text-decoration:none;opacity:.92}
+.nag nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.tel{font-weight:600;text-decoration:none;white-space:nowrap}
+.kosz-btn{position:relative;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 14px;border:1.5px solid rgba(255,255,255,.75);background:transparent;color:#fff;font:600 16px/1 SG,SGfb,sans-serif;cursor:pointer}
+.kosz-btn:hover{background:rgba(255,255,255,.14)}
+.kosz-btn svg{width:22px;height:22px}
+.licz{display:inline-grid;place-items:center;min-width:26px;height:22px;padding:0 6px 3px;background:#fff;color:var(--o2);font-size:13px;font-weight:700;clip-path:polygon(0 24%,9% 15%,9% 0,91% 0,91% 15%,100% 24%,61% 100%,50% 93%,39% 100%)}
+.menu-btn{display:none}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;color:#fff;background:#E25826;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:60% 62%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(150,40,0,.42) 0%,rgba(150,40,0,.12) 48%,rgba(0,0,0,0) 70%)}
+.hero-in{position:relative;z-index:2;width:var(--w);margin:0 auto;padding:clamp(130px,24vh,250px) 0 64px;display:flex;flex-direction:column;align-items:flex-start}
+.hero h1{font-size:clamp(46px,6.1vw,96px);font-weight:700;max-width:10.5em;letter-spacing:-.035em}
+.hero p{font-size:clamp(18px,1.45vw,22px);max-width:30em;margin:22px 0 0;line-height:1.5}
+.hero .btn{margin-top:34px}
+.hero .info{margin-top:22px;font-size:15px;opacity:.92}
+/* sekcje */
+section{scroll-margin-top:20px}
+.sek{padding:clamp(64px,8vw,112px) 0}
+.sek-g{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.sek h2{font-size:clamp(34px,4vw,56px)}
+.sek-g p{margin:12px 0 0;color:var(--m);max-width:34em}
+/* sklep */
+.filtry{display:flex;gap:8px;flex-wrap:wrap}
+.filtry button{height:42px;padding:0 16px;border:1.5px solid var(--l);background:#fff;color:var(--t);font:500 15px/1 SG,SGfb,sans-serif;cursor:pointer}
+.filtry button[aria-pressed=true]{background:var(--t);border-color:var(--t);color:#fff}
+.produkty{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.prod{display:flex;flex-direction:column;min-width:0}
+.prod[hidden]{display:none}
+.prod .fot{position:relative;background:var(--s);aspect-ratio:1/1;clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%)}
+.prod .fot img{width:100%;height:100%;object-fit:cover}
+.prod .kat{margin:16px 0 4px;font-size:14px;color:var(--ot);font-weight:600}
+.prod h3{font-size:20px;line-height:1.2;letter-spacing:-.01em}
+.prod .op{margin:6px 0 0;color:var(--m);font-size:15px;line-height:1.45;flex:1}
+.prod .dol{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--l)}
+.cena{font-size:14px;color:var(--m);line-height:1.25}
+.cena b{display:block;color:var(--t);font-size:16px}
+.prod .btn{--c:8px;min-height:44px;padding:0 16px;font-size:15px}
+.prod .btn.ok{background:var(--g)}
+.uwaga{margin:30px 0 0;font-size:14px;color:var(--m)}
+/* doradztwo - ciemna */
+.dor{background:var(--g);color:#fff}
+.dor .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.dor .fot{position:relative;clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%)}
+.dor .fot img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%}
+.dor h2{font-size:clamp(34px,4vw,56px)}
+.dor .lead{font-size:19px;margin:20px 0 0;color:#E9E4E0;max-width:32em}
+.lista{list-style:none;margin:30px 0 0;padding:0;border-top:1px solid #3A332E}
+.lista li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:18px 0;border-bottom:1px solid #3A332E}
+.lista .tarcza{color:var(--o);font-size:20px;margin-top:5px}
+.lista b{display:block;font-size:19px}
+.lista span{color:#C9C2BC;font-size:16px}
+.dor .btn{margin-top:32px}
+/* firmy */
+.firmy{background:var(--s)}
+.firmy .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px)}
+.firmy .lead{margin:18px 0 0;color:var(--m);font-size:18px;max-width:30em}
+.kontakt{margin:30px 0 0;display:grid;gap:14px}
+.kontakt a{display:flex;align-items:center;gap:14px;font-size:clamp(20px,2vw,26px);font-weight:600;text-decoration:none}
+.kontakt a:hover{color:var(--o2)}
+.kontakt small{display:block;font-size:14px;color:var(--m);font-weight:400}
+.kontakt svg{width:26px;height:26px;flex:none;color:var(--o)}
+form{background:#fff;padding:clamp(22px,3vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:14px;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+form h3{grid-column:1/-1;font-size:24px}
+label{display:grid;gap:6px;font-size:14px;font-weight:600;color:#33363B}
+label.pel{grid-column:1/-1}
+input,textarea,select{width:100%;font:400 16px/1.4 SG,SGfb,sans-serif;color:var(--t);padding:12px 14px;border:1.5px solid var(--l);background:#fff;border-radius:0}
+input:focus,textarea:focus{outline:2px solid var(--o);outline-offset:0;border-color:var(--o)}
+textarea{min-height:110px;resize:vertical}
+form .btn{grid-column:1/-1;justify-self:start}
+.komunikat{grid-column:1/-1;margin:0;font-size:15px;color:var(--ot);font-weight:600}
+/* stopka */
+.stopka{background:var(--o);color:#fff;padding:56px 0 28px}
+.stopka .g{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:28px}
+.stopka .logo{width:170px;height:auto}
+.stopka p{margin:14px 0 0;font-size:16px}
+.stopka h4{margin:0 0 10px;font-size:15px;font-weight:700}
+.stopka ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:16px}
+.stopka a{text-decoration:none}
+.stopka a:hover{text-decoration:underline}
+.stopka .dol{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.35);font-size:14px}
+/* koszyk */
+.zaslona{position:fixed;inset:0;background:rgba(20,16,13,.5);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.zaslona.on{opacity:1;pointer-events:auto}
+.koszyk{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:#fff;z-index:50;display:flex;flex-direction:column;transform:translateX(102%);transition:transform .28s cubic-bezier(.3,.7,.3,1);visibility:hidden}
+.koszyk.on{transform:none;visibility:visible}
+.koszyk header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--l)}
+.koszyk header h2{font-size:24px}
+.zamknij{width:44px;height:44px;border:0;background:var(--s);font-size:26px;line-height:1;cursor:pointer;color:var(--t)}
+.poz{flex:1;overflow:auto;padding:6px 22px}
+.pusty{color:var(--m);padding:24px 0}
+.p{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--l)}
+.p img{width:64px;height:64px;object-fit:cover;background:var(--s)}
+.p b{display:block;font-size:16px;line-height:1.25}
+.p small{color:var(--m);font-size:13px}
+.ilosc{display:flex;align-items:center;border:1.5px solid var(--l)}
+.ilosc button{width:34px;height:36px;border:0;background:#fff;font-size:18px;cursor:pointer;color:var(--t)}
+.ilosc span{min-width:26px;text-align:center;font-weight:600}
+.koszyk footer{padding:18px 22px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--l);background:var(--s)}
+.suma{display:flex;justify-content:space-between;font-size:16px;margin-bottom:6px}
+.suma b{font-size:17px}
+.platn{font-size:14px;color:var(--m);margin:8px 0 14px}
+.koszyk footer .btn{width:100%}
+.info-demo{font-size:14px;color:var(--ot);font-weight:600;margin:12px 0 0}
+.plywak{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:none;align-items:center;gap:10px;height:54px;padding:0 18px;border:0;background:var(--g);color:#fff;font:600 16px/1 SG,SGfb,sans-serif;cursor:pointer;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.plywak.on{display:inline-flex}
+.plywak .licz{color:var(--g)}
+.mmenu{display:none}
+.skip{position:absolute;left:-9999px}
+:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+/* responsywnie */
+@media (max-width:1100px){.produkty{grid-template-columns:repeat(3,minmax(0,1fr))}.nag nav{gap:18px}.nag .tel{display:none}}
+@media (max-width:860px){
+ .nag nav{display:none}
+ .menu-btn{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid rgba(255,255,255,.75);background:transparent;color:#fff;cursor:pointer;margin-left:auto}
+ .menu-btn svg{width:22px;height:22px}
+ .kosz-btn{padding:0 10px}.kosz-btn .tx{display:none}
+ .mmenu{position:absolute;top:76px;left:12px;right:12px;background:#fff;color:var(--t);padding:8px 20px 20px;box-shadow:0 18px 40px rgba(0,0,0,.2);clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%)}
+ .mmenu.on{display:block}
+ .mmenu a{display:block;padding:14px 0;border-bottom:1px solid var(--l);font-size:19px;font-weight:600;text-decoration:none}
+ .mmenu a.t{border:0;color:var(--ot)}
+ .dor .wrap,.firmy .wrap{grid-template-columns:minmax(0,1fr)}
+ .dor .fot{max-width:520px}
+ .dor .fot img{aspect-ratio:4/3}
+ .stopka .g{grid-template-columns:1fr 1fr}
+ .stopka .g>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+ :root{--w:calc(100% - 32px)}
+ body{font-size:16px}
+ .nag .wrap{height:64px;gap:10px}
+ .nag .logo{width:108px}
+ .mmenu{top:64px}
+ .hero{min-height:100svh}
+ .hero picture img{object-position:50% 100%}
+ .hero:after{background:linear-gradient(180deg,rgba(150,40,0,.18) 0%,rgba(150,40,0,0) 55%)}
+ .hero-in{padding:104px 0 40px}
+ .hero h1{font-size:clamp(40px,11.4vw,52px)}
+ .hero p{font-size:17px;margin-top:16px}
+ .hero .btn{margin-top:26px}
+ .hero .info{margin-top:16px;font-size:14px}
+ .produkty{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .produkty::-webkit-scrollbar{display:none}
+ .prod{flex:0 0 74%;scroll-snap-align:start;scroll-margin-left:16px}
+ .filtry{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 16px;scrollbar-width:none;width:calc(100% + 32px)}
+ .filtry button{flex:none}
+ .sek-g{margin-bottom:24px}
+ form{grid-template-columns:1fr}
+ .stopka{padding-bottom:88px}
+}
+@media (max-height:700px) and (max-width:760px){.hero-in{padding-top:88px}.hero h1{font-size:clamp(36px,10.5vw,46px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#sklep">Przejdź do sklepu</a>
+<header class="nag">
+ <div class="wrap">
+  <a href="#" aria-label="TOSSE - strona główna"><svg class="logo" viewBox="0 0 552 112" role="img" aria-label="TOSSE" fill="currentColor"><path d="M102.5 17.3H0V1.6H102.5V17.3ZM60.0 109.9H42.7V1.6H60.0V109.9Z"/><path d="M304.0 111.5C293.3 111.5 284.3 110.0 277.0 107.0C269.8 104.0 264.3 99.7 260.6 94.2C257.0 88.6 255.1 82.0 255.1 74.5V73.5H272.6V76.1C272.6 80.4 273.6 84.0 275.5 86.9C277.4 89.7 280.7 91.9 285.2 93.3C289.7 94.8 296.0 95.5 304.0 95.5C310.9 95.5 316.4 95.0 320.5 94.0C324.6 93.0 327.5 91.4 329.3 89.1C331.1 86.9 332.0 84.2 332.0 80.8C332.0 76.1 330.4 72.6 327.4 70.5C324.4 68.3 319.5 66.6 312.7 65.3L286.2 60.9C280.1 59.7 274.7 58.0 270.0 55.7C265.2 53.4 261.6 50.2 258.9 46.3C256.3 42.3 255.0 37.4 255.0 31.5C255.0 27.6 255.8 23.8 257.5 20.0C259.3 16.2 262.0 12.8 265.6 9.8C269.3 6.8 274.1 4.4 279.9 2.6C285.8 0.8 293.0 -0.0 301.5 -0.0C312.1 -0.0 320.8 1.6 327.6 4.8C334.4 8.0 339.4 12.4 342.7 18.0C346.0 23.5 347.6 29.9 347.6 37.0V38.0H330.3V35.9C330.3 31.4 329.4 27.7 327.4 24.8C325.5 21.8 322.3 19.6 317.9 18.1C313.5 16.7 307.5 16.0 299.9 16.0C293.3 16.0 288.0 16.5 284.0 17.6C279.9 18.7 277.0 20.2 275.2 22.3C273.3 24.4 272.4 27.2 272.4 30.5C272.4 33.5 273.1 36.0 274.4 38.0C275.7 39.9 277.7 41.4 280.3 42.6C283.0 43.7 286.5 44.8 290.7 45.7L317.1 50.3C324.3 51.5 330.3 53.5 335.1 56.1C339.9 58.7 343.5 62.0 345.9 65.9C348.2 69.9 349.4 74.6 349.4 79.9C349.4 85.1 347.9 90.5 344.7 95.4C341.6 100.2 336.7 104.1 330.0 107.1C323.3 110.1 314.6 111.6 304.0 111.6L304.0 111.5Z"/><path d="M407.3 111.5C396.7 111.5 387.7 110.0 380.4 107.0C373.1 104.0 367.6 99.7 364.0 94.2C360.3 88.6 358.5 82.0 358.5 74.5V73.5H375.9V76.1C375.9 80.4 376.9 84.0 378.9 86.9C380.8 89.7 384.0 91.9 388.6 93.3C393.1 94.8 399.4 95.5 407.3 95.5C414.2 95.5 419.7 95.0 423.8 94.0C427.9 93.0 430.9 91.4 432.7 89.1C434.4 86.9 435.3 84.2 435.3 80.8C435.3 76.1 433.8 72.6 430.8 70.5C427.8 68.3 422.9 66.6 416.1 65.3L389.5 60.9C383.5 59.7 378.1 58.0 373.4 55.7C368.6 53.4 364.9 50.2 362.3 46.3C359.6 42.3 358.3 37.4 358.3 31.5C358.3 27.6 359.2 23.8 360.9 20.0C362.6 16.2 365.3 12.8 369.0 9.8C372.7 6.8 377.4 4.4 383.3 2.6C389.2 0.8 396.4 -0.0 404.9 -0.0C415.5 -0.0 424.2 1.6 430.9 4.8C437.7 8.0 442.8 12.4 446.1 18.0C449.4 23.5 451.0 29.9 451.0 37.0V38.0H433.7V35.9C433.7 31.4 432.7 27.7 430.8 24.8C428.8 21.8 425.7 19.6 421.2 18.1C416.8 16.7 410.8 16.0 403.3 16.0C396.7 16.0 391.4 16.5 387.3 17.6C383.3 18.7 380.4 20.2 378.5 22.3C376.7 24.4 375.8 27.2 375.8 30.5C375.8 33.5 376.4 36.0 377.7 38.0C379.0 39.9 381.0 41.4 383.7 42.6C386.4 43.7 389.9 44.8 394.1 45.7L420.4 50.3C427.7 51.5 433.7 53.5 438.5 56.1C443.3 58.7 446.8 62.0 449.2 65.9C451.6 69.9 452.8 74.6 452.8 79.9C452.8 85.1 451.2 90.5 448.1 95.4C445.0 100.2 440.1 104.1 433.4 107.1C426.7 110.1 418.0 111.6 407.3 111.6L407.3 111.5Z"/><path d="M482.7 109.9H465.3V1.6H482.7V109.9ZM552.0 17.3H470.6V1.6H552.0V17.3ZM549.5 63.2H470.6V47.7H549.5V63.2ZM552.0 109.9H470.6V94.2H552.0V109.9Z"/><path d="M236.4 17.7L236.6 1.6L175.5 1.6L114.4 1.6L114.7 17.7L100.3 27.9L159.6 111.5L175.5 103.7L191.5 111.5L250.8 27.9L236.4 17.7H236.4ZM224.5 34.4L184.1 91.6C182.1 94.4 179.0 96.0 175.6 96.0C175.6 96.0 175.6 96.0 175.5 96.0C175.5 96.0 175.5 96.0 175.5 96.0C172.1 96.0 169.0 94.4 167.0 91.6L126.5 34.4C124.2 31.2 123.9 27.0 125.7 23.4C127.6 19.9 131.0 17.7 135.0 17.7H216.0C220.0 17.7 223.5 19.8 225.3 23.4C227.2 27.0 226.9 31.2 224.5 34.4H224.5Z"/></svg></a>
+  <nav aria-label="Menu główne"><a href="#sklep">Sklep</a><a href="#doradztwo">Doradztwo</a><a href="#firmy">Zamówienia dla firm</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="tel" href="tel:+48690422911">690 422 911</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  <button class="kosz-btn" type="button" data-otworz aria-label="Koszyk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 4h2.4l2.2 11h10.6L20.5 7H7"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></svg><span class="tx">Koszyk</span><span class="licz" data-licz>0</span></button>
+ </div>
+ <div class="mmenu" id="mmenu"><a href="#sklep">Sklep</a><a href="#doradztwo">Doradztwo</a><a href="#firmy">Zamówienia dla firm</a><a href="#kontakt">Kontakt</a><a class="t" href="tel:+48690422911">tel. 690 422 911</a></div>
+</header>
+
+<main>
+<section class="hero" aria-label="TOSSE">
+ <picture>
+  <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-800.webp 800w" sizes="100vw" width="800" height="1280">
+  <img src="img/hero-1512.webp" srcset="img/hero-1024.webp 1024w, img/hero-1512.webp 1512w" sizes="100vw" width="1512" height="982" alt="Okulary ochronne, nauszniki przeciwhałasowe i rękawice robocze" fetchpriority="high" decoding="async">
+ </picture>
+ <div class="hero-in">
+  <h1>Bezpieczeństwo<br> z&nbsp;wyboru.</h1>
+  <p>Artykuły przemysłowe i BHP dla firm. Doradzimy, co sprawdzi się na Państwa stanowiskach, i dostarczymy to w jednym zamówieniu.</p>
+  <a class="btn bia" href="#sklep">Przejdź do sklepu</a>
+  <div class="info">Zamówienia: zamowienia@tosse.com.pl</div>
+ </div>
+</section>
+
+<section class="sek" id="sklep">
+ <div class="wrap">
+  <div class="sek-g">
+   <div><h2>Sklep</h2><p>Ochrona od głowy do stóp. Dodaj produkty do koszyka i zamów od razu, albo wyślij listę - przygotujemy ofertę dla całej załogi.</p></div>
+   <div class="filtry" role="group" aria-label="Kategorie">
+    <button type="button" aria-pressed="true" data-f="*">Wszystko</button>
+    <button type="button" aria-pressed="false" data-f="ochrona">Ochrona osobista</button>
+    <button type="button" aria-pressed="false" data-f="odziez">Odzież i obuwie</button>
+    <button type="button" aria-pressed="false" data-f="pomoc">Pierwsza pomoc</button>
+   </div>
+  </div>
+  <div class="produkty">
+   <article class="prod" data-k="ochrona">
+    <div class="fot"><img src="img/okulary-360.webp" srcset="img/okulary-360.webp 360w, img/okulary-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Okulary ochronne" loading="lazy" decoding="async"></div>
+    <p class="kat">Ochrona oczu</p><h3>Okulary ochronne</h3><p class="op">Przezroczyste, z osłonami bocznymi - do warsztatu, magazynu i na budowę.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="okulary" data-n="Okulary ochronne" data-img="img/okulary-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="ochrona">
+    <div class="fot"><img src="img/sluch-360.webp" srcset="img/sluch-360.webp 360w, img/sluch-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Nauszniki przeciwhałasowe" loading="lazy" decoding="async"></div>
+    <p class="kat">Ochrona słuchu</p><h3>Nauszniki przeciwhałasowe</h3><p class="op">Na regulowanym pałąku, do pracy przy maszynach i elektronarzędziach.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="sluch" data-n="Nauszniki przeciwhałasowe" data-img="img/sluch-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="ochrona">
+    <div class="fot"><img src="img/rekawice-360.webp" srcset="img/rekawice-360.webp 360w, img/rekawice-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Rękawice robocze" loading="lazy" decoding="async"></div>
+    <p class="kat">Ochrona dłoni</p><h3>Rękawice robocze</h3><p class="op">Wzmacniane, w kilku rozmiarach - dobierzemy model do rodzaju pracy.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="rekawice" data-n="Rękawice robocze" data-img="img/rekawice-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="ochrona">
+    <div class="fot"><img src="img/kask-360.webp" srcset="img/kask-360.webp 360w, img/kask-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Kask ochronny" loading="lazy" decoding="async"></div>
+    <p class="kat">Ochrona głowy</p><h3>Kask ochronny</h3><p class="op">Z regulacją obwodu, w kolorach dla różnych funkcji na budowie.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="kask" data-n="Kask ochronny" data-img="img/kask-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="odziez">
+    <div class="fot"><img src="img/buty-360.webp" srcset="img/buty-360.webp 360w, img/buty-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Obuwie bezpieczne" loading="lazy" decoding="async"></div>
+    <p class="kat">Obuwie robocze</p><h3>Obuwie bezpieczne</h3><p class="op">Z noskiem ochronnym i podeszwą antypoślizgową.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="buty" data-n="Obuwie bezpieczne" data-img="img/buty-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="odziez">
+    <div class="fot"><img src="img/kamizelka-360.webp" srcset="img/kamizelka-360.webp 360w, img/kamizelka-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Kamizelka ostrzegawcza" loading="lazy" decoding="async"></div>
+    <p class="kat">Odzież ostrzegawcza</p><h3>Kamizelka ostrzegawcza</h3><p class="op">Z taśmami odblaskowymi - na plac, drogę i do magazynu.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="kamizelka" data-n="Kamizelka ostrzegawcza" data-img="img/kamizelka-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="ochrona">
+    <div class="fot"><img src="img/maska-360.webp" srcset="img/maska-360.webp 360w, img/maska-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Półmaska z filtrami" loading="lazy" decoding="async"></div>
+    <p class="kat">Ochrona dróg oddechowych</p><h3>Półmaska z filtrami</h3><p class="op">Do pyłów i oparów, z wymiennymi pochłaniaczami.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="maska" data-n="Półmaska z filtrami" data-img="img/maska-360.webp">Do koszyka</button></div>
+   </article>
+   <article class="prod" data-k="pomoc">
+    <div class="fot"><img src="img/apteczka-360.webp" srcset="img/apteczka-360.webp 360w, img/apteczka-640.webp 640w" sizes="(max-width:760px) 74vw, (max-width:1100px) 31vw, 300px" width="360" height="360" alt="Apteczka zakładowa" loading="lazy" decoding="async"></div>
+    <p class="kat">Pierwsza pomoc</p><h3>Apteczka zakładowa</h3><p class="op">Wyposażenie pierwszej pomocy do zakładu, pojazdu lub na budowę.</p>
+    <div class="dol"><span class="cena">Cena<b>z cennika TOSSE</b></span><button class="btn" type="button" data-dodaj data-id="apteczka" data-n="Apteczka zakładowa" data-img="img/apteczka-360.webp">Do koszyka</button></div>
+   </article>
+  </div>
+  <p class="uwaga">Zdjęcia poglądowe (Wikimedia Commons, licencje CC BY-SA / CC BY / CC0 / GFDL). W docelowym sklepie asortyment, zdjęcia i ceny z Państwa cennika.</p>
+ </div>
+</section>
+
+<section class="sek dor" id="doradztwo">
+ <div class="wrap">
+  <div class="fot"><img src="img/dor-800.webp" srcset="img/dor-480.webp 480w, img/dor-800.webp 800w" sizes="(max-width:860px) 92vw, 480px" width="800" height="1000" alt="Środki ochrony indywidualnej na stanowisku pracy" loading="lazy" decoding="async"></div>
+  <div>
+   <h2>Najpierw stanowisko, potem produkt</h2>
+   <p class="lead">Bezpieczeństwo z wyboru zaczyna się od dobrego doboru. Pomagamy wybrać środki ochrony tak, żeby chroniły i nie przeszkadzały w pracy.</p>
+   <ul class="lista">
+    <li><i class="tarcza"></i><div><b>Dobór do zagrożeń</b><span>Hałas, pył, chemia, praca na wysokości - dobieramy ochronę do tego, co dzieje się na stanowisku.</span></div></li>
+    <li><i class="tarcza"></i><div><b>Komplet dla całej załogi</b><span>Rozmiary, ilości i dostawy ustalone raz, bez zamawiania po kawałku u kilku dostawców.</span></div></li>
+    <li><i class="tarcza"></i><div><b>Efektywność firmy</b><span>Wygodna ochrona to ochrona, którą ludzie faktycznie noszą przez całą zmianę.</span></div></li>
+   </ul>
+   <a class="btn" href="#kontakt">Zapytaj o dobór</a>
+  </div>
+ </div>
+</section>
+
+<section class="sek firmy" id="firmy">
+ <div class="wrap">
+  <div id="kontakt">
+   <h2>Zamówienia dla firm</h2>
+   <p class="lead">Większe ilości, stałe dostawy, cała lista na raz - wyślij zapytanie, a przygotujemy ofertę.</p>
+   <div class="kontakt">
+    <a href="tel:+48690422911"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>+48 690 422 911<small>telefon</small></span></a>
+    <a href="mailto:zamowienia@tosse.com.pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg><span>zamowienia@tosse.com.pl<small>zamówienia i zapytania</small></span></a>
+   </div>
+  </div>
+  <form id="zapytanie" novalidate>
+   <h3>Zapytanie ofertowe</h3>
+   <label>Firma<input name="firma" autocomplete="organization"></label>
+   <label>Osoba kontaktowa<input name="osoba" autocomplete="name"></label>
+   <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+   <label>Telefon<input name="tel" type="tel" autocomplete="tel"></label>
+   <label class="pel">Czego potrzebujesz?<textarea name="tresc" placeholder="np. 20 par rękawic, 10 kasków, rozmiary..."></textarea></label>
+   <button class="btn" type="submit">Wyślij zapytanie</button>
+   <p class="komunikat" role="status" hidden></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="g">
+   <div><svg class="logo" viewBox="0 0 552 112" role="img" aria-label="TOSSE" fill="currentColor"><path d="M102.5 17.3H0V1.6H102.5V17.3ZM60.0 109.9H42.7V1.6H60.0V109.9Z"/><path d="M304.0 111.5C293.3 111.5 284.3 110.0 277.0 107.0C269.8 104.0 264.3 99.7 260.6 94.2C257.0 88.6 255.1 82.0 255.1 74.5V73.5H272.6V76.1C272.6 80.4 273.6 84.0 275.5 86.9C277.4 89.7 280.7 91.9 285.2 93.3C289.7 94.8 296.0 95.5 304.0 95.5C310.9 95.5 316.4 95.0 320.5 94.0C324.6 93.0 327.5 91.4 329.3 89.1C331.1 86.9 332.0 84.2 332.0 80.8C332.0 76.1 330.4 72.6 327.4 70.5C324.4 68.3 319.5 66.6 312.7 65.3L286.2 60.9C280.1 59.7 274.7 58.0 270.0 55.7C265.2 53.4 261.6 50.2 258.9 46.3C256.3 42.3 255.0 37.4 255.0 31.5C255.0 27.6 255.8 23.8 257.5 20.0C259.3 16.2 262.0 12.8 265.6 9.8C269.3 6.8 274.1 4.4 279.9 2.6C285.8 0.8 293.0 -0.0 301.5 -0.0C312.1 -0.0 320.8 1.6 327.6 4.8C334.4 8.0 339.4 12.4 342.7 18.0C346.0 23.5 347.6 29.9 347.6 37.0V38.0H330.3V35.9C330.3 31.4 329.4 27.7 327.4 24.8C325.5 21.8 322.3 19.6 317.9 18.1C313.5 16.7 307.5 16.0 299.9 16.0C293.3 16.0 288.0 16.5 284.0 17.6C279.9 18.7 277.0 20.2 275.2 22.3C273.3 24.4 272.4 27.2 272.4 30.5C272.4 33.5 273.1 36.0 274.4 38.0C275.7 39.9 277.7 41.4 280.3 42.6C283.0 43.7 286.5 44.8 290.7 45.7L317.1 50.3C324.3 51.5 330.3 53.5 335.1 56.1C339.9 58.7 343.5 62.0 345.9 65.9C348.2 69.9 349.4 74.6 349.4 79.9C349.4 85.1 347.9 90.5 344.7 95.4C341.6 100.2 336.7 104.1 330.0 107.1C323.3 110.1 314.6 111.6 304.0 111.6L304.0 111.5Z"/><path d="M407.3 111.5C396.7 111.5 387.7 110.0 380.4 107.0C373.1 104.0 367.6 99.7 364.0 94.2C360.3 88.6 358.5 82.0 358.5 74.5V73.5H375.9V76.1C375.9 80.4 376.9 84.0 378.9 86.9C380.8 89.7 384.0 91.9 388.6 93.3C393.1 94.8 399.4 95.5 407.3 95.5C414.2 95.5 419.7 95.0 423.8 94.0C427.9 93.0 430.9 91.4 432.7 89.1C434.4 86.9 435.3 84.2 435.3 80.8C435.3 76.1 433.8 72.6 430.8 70.5C427.8 68.3 422.9 66.6 416.1 65.3L389.5 60.9C383.5 59.7 378.1 58.0 373.4 55.7C368.6 53.4 364.9 50.2 362.3 46.3C359.6 42.3 358.3 37.4 358.3 31.5C358.3 27.6 359.2 23.8 360.9 20.0C362.6 16.2 365.3 12.8 369.0 9.8C372.7 6.8 377.4 4.4 383.3 2.6C389.2 0.8 396.4 -0.0 404.9 -0.0C415.5 -0.0 424.2 1.6 430.9 4.8C437.7 8.0 442.8 12.4 446.1 18.0C449.4 23.5 451.0 29.9 451.0 37.0V38.0H433.7V35.9C433.7 31.4 432.7 27.7 430.8 24.8C428.8 21.8 425.7 19.6 421.2 18.1C416.8 16.7 410.8 16.0 403.3 16.0C396.7 16.0 391.4 16.5 387.3 17.6C383.3 18.7 380.4 20.2 378.5 22.3C376.7 24.4 375.8 27.2 375.8 30.5C375.8 33.5 376.4 36.0 377.7 38.0C379.0 39.9 381.0 41.4 383.7 42.6C386.4 43.7 389.9 44.8 394.1 45.7L420.4 50.3C427.7 51.5 433.7 53.5 438.5 56.1C443.3 58.7 446.8 62.0 449.2 65.9C451.6 69.9 452.8 74.6 452.8 79.9C452.8 85.1 451.2 90.5 448.1 95.4C445.0 100.2 440.1 104.1 433.4 107.1C426.7 110.1 418.0 111.6 407.3 111.6L407.3 111.5Z"/><path d="M482.7 109.9H465.3V1.6H482.7V109.9ZM552.0 17.3H470.6V1.6H552.0V17.3ZM549.5 63.2H470.6V47.7H549.5V63.2ZM552.0 109.9H470.6V94.2H552.0V109.9Z"/><path d="M236.4 17.7L236.6 1.6L175.5 1.6L114.4 1.6L114.7 17.7L100.3 27.9L159.6 111.5L175.5 103.7L191.5 111.5L250.8 27.9L236.4 17.7H236.4ZM224.5 34.4L184.1 91.6C182.1 94.4 179.0 96.0 175.6 96.0C175.6 96.0 175.6 96.0 175.5 96.0C175.5 96.0 175.5 96.0 175.5 96.0C172.1 96.0 169.0 94.4 167.0 91.6L126.5 34.4C124.2 31.2 123.9 27.0 125.7 23.4C127.6 19.9 131.0 17.7 135.0 17.7H216.0C220.0 17.7 223.5 19.8 225.3 23.4C227.2 27.0 226.9 31.2 224.5 34.4H224.5Z"/></svg><p>Bezpieczeństwo z wyboru.<br>Artykuły przemysłowe i BHP.</p></div>
+   <div><h4>Sklep</h4><ul><li><a href="#sklep">Ochrona osobista</a></li><li><a href="#sklep">Odzież i obuwie</a></li><li><a href="#sklep">Pierwsza pomoc</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="tel:+48690422911">+48 690 422 911</a></li><li><a href="mailto:zamowienia@tosse.com.pl">zamowienia@tosse.com.pl</a></li></ul></div>
+   <div><h4>Social media</h4><ul><li><a href="https://www.facebook.com/TOSSE.BHP/" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/tosse.bhp/" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/tosse-bhp/" rel="noopener">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="dol"><span>© 2026 TOSSE. Podgląd koncepcji strony.</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=tosse.com.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<div class="zaslona" data-zamknij></div>
+<aside class="koszyk" id="koszyk" aria-label="Koszyk" aria-hidden="true">
+ <header><h2>Koszyk</h2><button class="zamknij" type="button" data-zamknij aria-label="Zamknij koszyk">×</button></header>
+ <div class="poz" data-poz><p class="pusty">Koszyk jest pusty. Dodaj produkty ze sklepu.</p></div>
+ <footer>
+  <div class="suma"><span>Pozycji w koszyku</span><b data-szt>0 szt.</b></div>
+  <div class="suma"><span>Suma</span><b>według cennika</b></div>
+  <p class="platn">Płatność online, dane do faktury i dostawa - w kolejnym kroku.</p>
+  <button class="btn" type="button" data-zamow>Przejdź do zamówienia</button>
+  <p class="info-demo" data-demo hidden>To podgląd - zamówienie nie jest wysyłane. W gotowym sklepie tu będzie formularz zamówienia i płatność online.</p>
+ </footer>
+</aside>
+<button class="plywak" type="button" data-otworz aria-label="Otwórz koszyk">Koszyk <span class="licz" data-licz>0</span></button>
+<script src="app.js" defer></script>
+</body>
+</html>
